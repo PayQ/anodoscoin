@@ -1,0 +1,26 @@
+[Unit]
+Description=ANS's distributed currency daemon
+After=network.target
+
+[Service]
+User=ans
+Group=ans
+
+Type=forking
+PIDFile=/var/lib/ansd/ansd.pid
+
+ExecStart=/usr/bin/ansd -daemon -pid=/var/lib/ansd/ansd.pid \
+          -conf=/etc/ans/ans.conf -datadir=/var/lib/ansd
+
+ExecStop=-/usr/bin/ans-cli -conf=/etc/ans/ans.conf \
+         -datadir=/var/lib/ansd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

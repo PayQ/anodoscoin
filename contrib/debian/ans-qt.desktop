@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=ANS
+Comment=ANS P2P Cryptocurrency
+Comment[fr]=ANS, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=ANS, eşten eşe kriptografik sanal para birimi
+Exec=ans-qt %u
+Terminal=false
+Type=Application
+Icon=ans128
+MimeType=x-scheme-handler/ans;
+Categories=Office;Finance;

@@ -1,0 +1,26 @@
+# /etc/conf.d/ansd: config file for /etc/init.d/ansd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/ans/ans.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/ansd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/ansd.pid"
+
+# Where to write ansd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/ansd"
+
+# User and group to own ansd process
+#BITCOIND_USER="ans"
+#BITCOIND_GROUP="ans"
+
+# Path to ansd executable
+#BITCOIND_BIN="/usr/bin/ansd"
+
+# Nice value to run ansd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
